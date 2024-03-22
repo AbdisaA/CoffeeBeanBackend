@@ -12,8 +12,8 @@ function createDestinationFolder(destination) {
   }
 }
 const createMulterMiddleware = require("../middleware/multer");
-createDestinationFolder("uploads/");
-const uploadMiddleware = createMulterMiddleware("uploads/"); // Specify the destination folder
+createDestinationFolder("Images/uploads/");
+const uploadMiddleware = createMulterMiddleware("Images/uploads/"); // Specify the destination folder
 
 router.post(
   "/",

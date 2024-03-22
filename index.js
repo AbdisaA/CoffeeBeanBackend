@@ -1,6 +1,6 @@
 const express = require("express");
 const corsMiddleware = require("./middleware/cors");
-const path = require("path");
+const subscribed = require("./routers/subscriptionRouter");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
@@ -12,6 +12,8 @@ app.use(express.json()); // Parse JSON bodies
 app.use(corsMiddleware);
 
 app.use("/api/users/", UserRouters);
+app.use("/api/subscription/", subscribed);
+app.use("/api/cart/", subscribed);
 
 mongoose
   .connect("mongodb://localhost:27017/CoffeeBeansDB", {
