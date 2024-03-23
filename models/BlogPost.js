@@ -13,3 +13,6 @@ const BlogPostSchema = new mongoose.Schema(
 );
 
 const BlogPost = mongoose.model("BlogPost", BlogPostSchema);
+
+module.exports = BlogPost;
+``;
